@@ -46,12 +46,11 @@ def number_combo_lock_recursive(items_to_permute):
 num = number_combo_lock_recursive(6)
 print num
 
-#Since the recursive method above is limited by Python to 999 calls, for lager sets of numbers we will need to use
+#Since the recursive method above is limited by Python to 999 calls, for larger sets of numbers we will need to use
 #an iterative method. The function below is an adaptation of Tom Switzer's code,
 #which can be found here: https://github.com/tixxit/permute
 
 def number_combo_lock_iterative(lst, k):
-    num = []
     # Copyright (c) 2009, Tom Switzer <thomas.switzer@gmail.com>
     #
     # Permission to use, copy, modify, and/or distribute this software for any
