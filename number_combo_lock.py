@@ -35,9 +35,6 @@ def number_combo_lock_recursive(items_to_permute):
                     permute(new_combo)
 
     def main():
-        """
-        main method
-        """
         permute(range(items_to_permute))  #unfortunately Python is limited to 999 calls.
         for combo in all_permutations:
             print combo
@@ -46,8 +43,8 @@ def number_combo_lock_recursive(items_to_permute):
     if __name__ == "__main__":
         main()
 
-print number_combo_lock_recursive(6)
-
+num = number_combo_lock_recursive(6)
+print num
 
 #Since the recursive method above is limited by Python to 999 calls, for lager sets of numbers we will need to use
 #an iterative method. The function below is an adaptation of Tom Switzer's code,
@@ -177,7 +174,27 @@ def number_combo_lock_iterative(lst, k):
             for perm in permutations(cmb):
                 yield perm
 
-    num.append([x for x in permutations_of_combinations(range(lst), k)])
+    num = [x for x in permutations_of_combinations(range(lst), k)]
     return num
 
-print number_combo_lock_iterative(10, 8)
+num =  number_combo_lock_iterative(10, 8)
+print num
+
+#We may want to display every combination of digits (i.e. every unique number) as an integer.
+#The function I wrote below takes the array of numbers outputted in the iterative process and converts them
+#to integers. NOTE: The recursive method has not been updated to take advantage of this translation function.
+
+def translate(numList, loopprint):
+    num = numList
+    numtrans = []
+    for i in range(len(num)):
+        num[i] = map(str, num[i])
+        num[i] = ''.join(num[i])
+        num[i] = int(num[i])
+        if loopprint == 1:
+            print num[i]
+        numtrans.append(num[i])
+    return numtrans
+
+trans = translate(num, 1)
+print trans
