@@ -2,6 +2,6 @@ Number Combo Lock
 ==========
 Recursive and iterative methods for generating all possible combinations of numbers (permutation).
 
-The code contained in this repository is an adaptation of code from two sources:
-1: https://github.com/Mariatta/permutation (Recursive)
-2: https://github.com/tixxit/permute (Iterative)
+The code contained in this repository is my personal code in addition to adaptations of code from two sources:
+* https://github.com/Mariatta/permutation (Recursive)
+* https://github.com/tixxit/permute (Iterative)
